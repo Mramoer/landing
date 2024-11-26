@@ -1,0 +1,36 @@
+:root {
+    /* разрешения экранов */
+    --mobile-device: 550px;
+    --mini-tablet-device: 767px;
+    --tablet-device: 1024px;
+    --notebook-device: 1366px;
+    /* шрифты */
+
+    --mobile-font-sm: 6px;
+    --mobile-font-md: 10px;
+    --mobile-font-lg: 12px;
+
+    --mini-tablet-font-sm: 12px;
+    --mini-tablet-font-md: 14px;
+    --mini-tablet-font-lg: 16px;
+
+    --tablet-font-sm: 14px;
+    --tablet-font-md: 16px;
+    --tablet-font-lg: 18px;
+
+    --notebook-font-sm: 18px;
+    --notebook-font-md: 20px;
+    --notebook-font-lg: 22px;
+    
+    --desktop-font-sm: 20px;
+    --desktop-font-md: 22px;
+    --desktop-font-lg: 24px;
+
+    --main-font: 1.2rem "Gill Sans", sans-serif;
+    /* отступы */
+    --body-margin: 1em 0 3em 7%;  
+    /* размеры */
+    --header-height: 10vh;
+    --nav-height: 300px;
+    --nav-width: 40%;
+}
