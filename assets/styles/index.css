@@ -46,6 +46,7 @@ a {
     display: inline-block;
     margin-right: 1em;
     text-transform: uppercase;
+    font-family: Georgia, serif;
 }
 
 .header > * {
@@ -55,12 +56,20 @@ a {
 .header > nav {
     display: flex; 
     justify-content: space-between;
-    width: 25%;
+    width: 30%;
 }
 
 .header > nav > a {
     margin: 0 1rem;
-    font-size: calc(var(--desktop-font-sm) / 1.5);
+    font-size: calc(var(--desktop-font-sm));
+    padding: 0.4em 0.5em;
+    border: transparent 1px solid;
+    border-radius: 0.3em;
+    transition: border 300ms ease;
+}
+
+.header > nav > a:hover {
+    border: 1px white dashed;
 }
 
 .trigger {
@@ -78,6 +87,8 @@ a {
 .checklist > h1 {
     font-size: calc(var(--desktop-font-lg) * 2);
     margin: 0;
+    font-family: Georgia, serif;
+
 }
 
 .checklist > h3 {
@@ -133,7 +144,6 @@ a {
 
 
 .mid-info {
-    background-color: rgb(32,32,32);
     height: 40%;
     margin: 10% 0 5% -8%; 
     width: 100%;
@@ -176,6 +186,7 @@ a {
     grid-template-columns: 34% 32% 34%;
     gap: 0.3em;
     box-sizing: border-box;
+    margin-bottom: 10em;
 }
 
 .center-layer > img {
@@ -239,6 +250,7 @@ a {
 
 .form-div > h1 {
     color: rgb(112, 113, 124);
+    font-family: Georgia, serif;
     font-size: calc(var(--desktop-font-lg) * 1.4)
 }
 
@@ -252,7 +264,7 @@ a {
 .form > input[type=text], .form > input[type=email] {
     height: 3em;
     font-size: var(--desktop-font-md);
-    padding-left: 1em;
+    padding: 0.5em 0 0.5em 1em;
     margin: 0.5em 0;
 }
 
@@ -265,7 +277,7 @@ a {
 .accept-form > input[type=checkbox] {
     height: 2em;
     width: 2em;
-    margin-right: 2em;
+    margin-right: 1em;
     border: 3px rgb(27, 27, 27) solid;
     border-radius: 3px;
     cursor: pointer;
@@ -280,6 +292,11 @@ a {
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 10px;
+    transition: background-color 300ms ease;
+}
+
+.submit-button:hover {
+    background-color: rgb(20, 19, 19);
 }
 
 .accept-form > input[type=checkbox] ~ label {
@@ -300,14 +317,23 @@ a {
     display: flex;
     justify-content: center;
     outline: 0.01em solid white;
-    margin: 0 -1% 0 -8%;
+    margin: 0 -1% 0 -14%;
     padding: 1em;
 }
 
 .first-footer > a {
     margin: 1em 3em;
     text-transform: uppercase;
-    font-size: var(--desktop-font-sm)
+    font-size: var(--desktop-font-sm);
+    border: 1px transparent solid;
+    border-radius: 0.3em;
+    padding: 0.3em 0.5em;
+    transition: border 300ms ease;
+}
+
+.first-footer > a:hover {
+    border: 1px white dashed;
+
 }
 
 .second-footer {
@@ -363,7 +389,7 @@ a {
     display: flex;
     width: 90%;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     font-size: var(--desktop-font-sm);
 }
@@ -384,6 +410,14 @@ a {
     float: right;
     margin: 1em 0;
     text-align: center;
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    border: 1px transparent solid;
+    transition: border 300ms ease;
+}
+
+.terms > a:hover {
+    border: 1px white dashed;
 }
 
 button:not(.submit-button) {
@@ -476,7 +510,7 @@ button:not(.submit-button):hover {
     }
 
     .accept-form > input[type=checkbox] ~ label {
-        font-size: var(--notebook-font-lg);
+        font-size: var(--notebook-font-sm);
     }
 
     .first-footer > a {
@@ -593,11 +627,11 @@ button:not(.submit-button):hover {
     }
 
     .form-div > h1 {
-        font-size: calc(var(--tablet-font-lg));
+        font-size: calc(var(--tablet-font-sm));
     }
 
     .form > input[type=text], .form > input[type=email] {
-        font-size: var(--tablet-font-md);
+        font-size: var(--tablet-font-sm);
     }
 
     .accept-form > input[type=checkbox] ~ label {
@@ -644,8 +678,8 @@ button:not(.submit-button):hover {
     }
 
     .checklist > p > img {
-        height: 1em;
-        margin-right: 0.5em;
+        height: 1.3em;
+        margin-right: 1em;
     }
 
     .header > nav > a {
@@ -709,8 +743,12 @@ button:not(.submit-button):hover {
         font-size: var(--mini-tablet-font-sm);
     }
 
+    .center-layer {
+        margin-bottom: 3em;
+    }
+
     .cent-wrap {
-        height: 90%;
+        height: 80%;
     }
 
     .mid-order {
@@ -726,11 +764,11 @@ button:not(.submit-button):hover {
     }
 
     .form > input[type=text], .form > input[type=email] {
-        font-size: var(--mini-tablet-font-md);
+        font-size: var(--mini-tablet-font-sm);
     }
 
     .accept-form > input[type=checkbox] ~ label {
-        font-size: var(--mini-tablet-font-sm);
+        font-size: calc(var(--mini-tablet-font-sm) * 0.8);
     }
     
     .submit-button {
@@ -743,11 +781,15 @@ button:not(.submit-button):hover {
     }
 
     .company-name {
-        font-size: calc(var(--mini-tablet-font-lg) * 1.5);
+        font-size: calc(var(--mini-tablet-font-lg));
     }
 
     .copyright {
         font-size: var(--mini-tablet-font-sm)
+    }
+
+    .social-media > a > img {
+    margin: 0 0.2em;
     }
 
     .social-wrapper > p {
@@ -755,7 +797,7 @@ button:not(.submit-button):hover {
     }
 
     .terms > button {
-        font-size: var(--mini-tablet-font-md);
+        font-size: var(--mini-tablet-font-sm);
     }
 
     .terms > a {
@@ -763,8 +805,8 @@ button:not(.submit-button):hover {
     }
 
     .social-media > a > img {
-        width: calc(var(--mini-tablet-font-lg) * 1.5);
-        height: calc(var(--mini-tablet-font-lg) * 1.5);
+        width: calc(var(--mini-tablet-font-lg));
+        height: calc(var(--mini-tablet-font-lg));
     }
 
     .accept-form > input[type=checkbox] {
@@ -775,10 +817,11 @@ button:not(.submit-button):hover {
 
     .form > input[type=text], .form > input[type=email] {
         margin: 0.2em 0;
+        padding: 0.2em 0 0.2em 0.5em;
     }
 
     .checklist > p > img {
-        height: 1em;
+        height: 1.5em;
         margin-right: 0.3em;
     }
 
@@ -842,7 +885,7 @@ button:not(.submit-button):hover {
 
     .order-btn {
         font-size: calc(var(--mobile-font-sm) * 1.5);
-        padding: 1em 0.8em;
+        padding: 0.5em 0.8em;
         border-radius: 2px;
     }
 
@@ -864,7 +907,7 @@ button:not(.submit-button):hover {
     }
 
     .form > input[type=text], .form > input[type=email] {
-        font-size: var(--mobile-font-sm);
+        font-size: calc(var(--mobile-font-sm) * 1.2);
     }
 
     .accept-form > input[type=checkbox] ~ label {
@@ -906,7 +949,7 @@ button:not(.submit-button):hover {
     .form-div > h1 {
         color: rgb(112, 113, 124);
         padding-bottom: 0;
-        font-size: calc(var(--mobile-font-md));
+        font-size: calc(var(--mobile-font-sm));
     }
 
     .accept-form {
